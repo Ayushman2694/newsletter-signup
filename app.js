@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true })); // To access the body parser package
 app.use(express.static("Public")); // to access static files such as images and css
 const port =  process.env.PORT;
-const apiKey = "d9905a305481989797b80db53f037a14-us14";
+const apiKey = "cd6546eda42e329580c40310e03d2d27-us14";
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/signup.html");
@@ -47,7 +47,7 @@ app.post("/", (req, res) => {
       console.log(JSON.parse(data));
     
     });
-    if(response.statuCode == 200){
+    if(response.statusCode == 200){
     res.sendFile(__dirname + "/success.html");
     console.log(response.statusCode);}
     else{
