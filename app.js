@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser"); // to pass data of form in json format
 const request = require("request");
@@ -6,7 +7,7 @@ const https = require("https");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true })); // To access the body parser package
 app.use(express.static("Public")); // to access static files such as images and css
-
+const port =  process.env.PORT;
 const apiKey = "d9905a305481989797b80db53f037a14-us14";
 
 app.get("/", (req, res) => {
@@ -61,6 +62,6 @@ app.post("/failure",(req,res)=>{
   res.redirect("/");
 });
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log("server is listening to port " + process.env.PORT || 5000 );
+app.listen(port, () => {
+  console.log("server is listening to port " + port );
 });
