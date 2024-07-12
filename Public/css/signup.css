@@ -1,0 +1,66 @@
+
+body {
+  padding: 30vh;
+  background-color:azure;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+div {
+
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  margin:5px;
+  align-self: center;
+}
+button {
+  display: inline-block;
+  width: 50%;
+  align-self: center;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#fname{
+  border-radius: 5px 5px 0px 0px;
+  height:25px;
+  
+}
+
+#lname{
+  margin-top: -2px;
+  height:25px;
+  border-radius:0px;
+}
+#email{
+  margin-top: -2px;
+  height:25px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+img{
+  height:5%;
+  width:5%;
+}
